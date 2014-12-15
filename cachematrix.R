@@ -45,6 +45,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve takes the output of makeCacheMatrix as input
 ## when you invoke cacheSolve, you can pass other parameters to the solve
 ## function in place of "..."
+## cacheSolve checks if the matrix inverse exists, before actually computing
+## the inverse. If the matrix inverse exists, then it just returns the inverse
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
